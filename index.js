@@ -104,7 +104,8 @@ app.get('/kamar', function(req,res){
 app.post('/kamar', function(req,res){
     data = {
         nomorkamar: req.body.nomorkamar,
-        categoryid: req.body.categoryid
+        categoryid: req.body.categoryid,
+        harga: req.body.harga
     }
     sql = `INSERT INTO tablekamar SET ?`
     conn.query(sql, data, (err,results)=>{
