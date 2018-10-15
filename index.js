@@ -111,7 +111,7 @@ app.post('/kamar', function(req,res){
     conn.query(sql, data, (err,results)=>{
         if(err) throw err;
         console.log(results)
-        res.send({status:"Create kamar success", insertId: results.insertId, nomorkamar: req.body.nomorkamar, categoryid:req.body.categoryid})
+        res.send({status:"Create kamar success", insertId: results.insertId, nomorkamar: req.body.nomorkamar, categoryid:req.body.categoryid, harga:req.body.harga})
     })
 })
 
